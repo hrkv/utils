@@ -4,7 +4,7 @@
  * @return {function}
  */
 export default function queue(...functions) {
-  return functions(...args) {
+  return function(...args) {
     if (functions.length) {
       functions.shift()(...args);
     }
