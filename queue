@@ -1,0 +1,12 @@
+/**
+ * It wraps functions to call every function only once
+ * @param {...function}
+ * @return {function}
+ */
+export default function queue(...functions) {
+  return functions(...args) {
+    if (functions.length) {
+      functions.shift()(...args);
+    }
+  }
+} 
